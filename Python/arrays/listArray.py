@@ -1,21 +1,27 @@
-import numpy as np
 import sys
 
+"""
+This script reviews lists which are dynamic arrays in Python:
+
+PROS:
+    - no need to import a module
+    - can store different data types
+    - easily add or delete elements in array
+
+CONS:
+    - can't handle vector-like arithmetic operations
+"""
 class DynamicArray:
 
     #C = create
     def __init__(self, sort_flg = False):
-        ''' initialize object 
-            * operation complexity: O(1)
-        '''
+        ''' initialize object '''
         self.__darray = []
         self.__sort_flg = sort_flg
 
     #R = read (search)
     def search(self,element):
-        ''' return index of element if exists in array. else return -1 
-            * operation complexity: O(n)
-        '''
+        ''' return index of element if exists in array. else return -1 '''
         
         #element can't exist in empty list
         if len(self.__darray) == 0:
@@ -29,10 +35,7 @@ class DynamicArray:
 
     #U = update (insert)
     def insert(self, element):
-        ''' insert new element into array 
-            * operation complexity (if sorted): O(n)
-            * operation complexity (if not sorted): O(1) **
-        '''
+        ''' insert new element into array '''
 
         length = len(self.__darray)
         
@@ -51,9 +54,7 @@ class DynamicArray:
     
     #D = delete
     def delete(self, element):
-        ''' insert new element into array 
-            * operation complexity: O(n) **
-        '''
+        ''' insert new element into array '''
 
         #check if non-empty
         if len(self.__darray) > 0:
