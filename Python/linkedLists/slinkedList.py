@@ -4,7 +4,7 @@ import sys
 """
 This script implements a singly linked list. 
 
-Linked lists are data structures made of nodes. Each node is stored randommly throughout memory, 
+Linked lists are linear data structures made of nodes. Each node is stored randommly throughout memory, 
 however what links these node together are pointers. 
 
 """
