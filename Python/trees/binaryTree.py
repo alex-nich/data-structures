@@ -1,8 +1,14 @@
 '''
 Trees are non-linear data structures that store data in a hierarchical fashion.
 Trees are similar to linked list in that they are constructed using node. 
-Each node stores data and pointers to the left, right, and parent nodes (optional).
+Each node stores data and pointers to the children (left, right) and parent nodes (optional).
 A pointer to the parent node can be useful if the traversal path needs to be recovered.
+Tree can be traversed our different ways:
+ (1) Breadth-first (i.e. level-order)
+ (2) Depth-first
+    a. pre-order
+    b. in-order
+    c. post-order
 
 A binary tree is a special tree where any node can have at max two children. 
 
@@ -120,7 +126,7 @@ class BinaryTree:
 
             #check if current node.value == value
             if current.value == value:
-                return (current)
+                return current
             
             #if not, add children nodes (left, then right) to queue 
             else:
